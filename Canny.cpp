@@ -3,8 +3,8 @@ using namespace cv;
  
 int main(int argc, char** argv)
 {
-    Mat img, gray;
-    img = imread("image.jpg", 1);
+    UMat img, gray;
+    imread("image.jpg", 1).copyTo(img);
      
     cvtColor(img, gray, COLOR_BGR2GRAY);
     GaussianBlur(gray, gray,Size(7, 7), 1.5);
